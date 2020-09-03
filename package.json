@@ -22,6 +22,5 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "jest"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
