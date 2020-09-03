@@ -6,25 +6,27 @@
   "author": "trouthouse-tech",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "@react-native-community/eslint-config": "^2.0.0",
-    "@types/react-native": "^0.63.13",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "eslint": "^7.7.0",
-    "metro-react-native-babel-preset": "^0.63.0",
-    "prettier": "^2.1.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^16.13.1",
     "react-native": "^0.63.2"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.13",
+    "@types/react-native": "^0.63.13",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test": "jest",
+    "test": "jest --config jestconfig.json",
     "build": "tsc"
   }
 }
