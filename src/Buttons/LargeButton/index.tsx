@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {Fonts, Utils, Colors} from '../../../styles';
+import {Fonts, Utils, Colors} from '../../styles/';
 import BaseButton from '../BaseButton';
-import {ButtonProps} from '../types';
+import {ButtonProps} from '../';
 
 export default function LargeButton({
   onPress,

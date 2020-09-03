@@ -3,6 +3,7 @@ import LargeButton from './LargeButton';
 import LargeSquareOnPress from './LargeSquareOnPress';
 import TextButton from './TextButton';
 import SmallHallowButton from './SmallHallow';
+import {ButtonProps} from "./types";
 
 export {
   LargeHallowSquareOnPress,
@@ -10,4 +11,5 @@ export {
   LargeSquareOnPress,
   TextButton,
   SmallHallowButton,
+  ButtonProps
 };

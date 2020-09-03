@@ -1,6 +1,6 @@
 import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
 import React from 'react';
-import {Fonts} from '../../../styles';
+import {Fonts} from '../../styles/';
 
 type Props = {
   isActive: boolean;
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
 
   text: {
     marginLeft: 5,
-    ...Fonts.large,
+    fontSize: Fonts.normal,
   },
 });
