@@ -1,6 +1,6 @@
 {
   "name": "golfpro-rn-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Components library for golfpro-apps",
   "main": "lib/index.js",
   "typings": "lib/index",
@@ -11,7 +11,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {},
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.63.2"
+  },
   "devDependencies": {
     "@babel/preset-react": "^7.10.4",
     "@react-native-community/eslint-config": "^2.0.0",
@@ -25,8 +28,6 @@
     "jest": "^26.4.2",
     "metro-react-native-babel-preset": "^0.63.0",
     "prettier": "^2.1.1",
-    "react": "^16.13.1",
-    "react-native": "^0.63.2",
     "react-test-renderer": "^16.13.1",
     "typescript": "^4.0.2"
   },
