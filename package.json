@@ -1,6 +1,6 @@
 {
   "name": "golfpro-rn-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Components library for golfpro-apps",
   "main": "index.js",
   "author": "trouthouse-tech",
@@ -10,9 +10,7 @@
     "react": "^16.13.1",
     "react-native": "^0.63.2"
   },
-  "peerDependencies": {
-    
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "@babel/preset-react": "^7.10.4",
     "@react-native-community/eslint-config": "^2.0.0",
