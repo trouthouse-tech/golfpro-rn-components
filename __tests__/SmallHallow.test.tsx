@@ -16,7 +16,7 @@ describe('SmallHallowButton', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders a clickable LargeHSmallHallowButtonallowSquareOnPress", () => {
+  it("renders a clickable SmallHallowButton", () => {
     const { getByText } = render(
       <SmallHallowButton text="Clickable" onPress={mockClickFunction} />
     );
