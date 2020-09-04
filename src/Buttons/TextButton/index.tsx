@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import { Text } from 'react-native';
 import BaseButton from '../BaseButton';
 
 interface TextButtonProps {
@@ -10,12 +10,12 @@ interface TextButtonProps {
 }
 
 export default function TextButton(props: TextButtonProps) {
-  const {onPress, buttonStyle, textStyle, text} = props;
+  const { onPress, buttonStyle, textStyle, text } = props;
   return (
     <BaseButton
       onPress={() => onPress()}
       buttonStyle={buttonStyle}
-      child={<Text style={textStyle}>{text}</Text>}
+      child={<Text testID="textInButton" style={textStyle}>{text}</Text>}
     />
   );
 }

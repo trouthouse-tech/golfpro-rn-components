@@ -1,8 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {LargeHallowSquareOnPress} from "../src/Buttons";
-import {Colors} from '../src/styles/';
-
+import { LargeHallowSquareOnPress } from "../src/Buttons";
+import { Colors } from '../src/styles/';
 
 import { render, cleanup, fireEvent } from "@testing-library/react-native";
 import '@testing-library/jest-native/extend-expect';
@@ -20,19 +18,19 @@ describe('LargeHallowSquareOnPress', () => {
 
   it("renders a clickable LargeHallowSquareOnPress", () => {
     const { getByText } = render(
-      <LargeHallowSquareOnPress text="Clickable" onPress={mockClickFunction}/>
+      <LargeHallowSquareOnPress text="Clickable" onPress={mockClickFunction} />
     );
-  
+
     const button = getByText("Clickable");
     fireEvent.press(button); //press the button
-    expect(mockClickFunction).toHaveBeenCalledTimes(1); 
+    expect(mockClickFunction).toHaveBeenCalledTimes(1);
   });
 
   it("styles LargeHallowSquareOnPress correctly", () => {
     const { getByTestId } = render(
-      <LargeHallowSquareOnPress text="Clickable" onPress={mockClickFunction} 
-           />
-    ); 
+      <LargeHallowSquareOnPress text="Clickable" onPress={mockClickFunction}
+      />
+    );
     const baseButton = getByTestId("basebutton");
     expect(baseButton).toHaveStyle({
       backgroundColor: Colors.white,
