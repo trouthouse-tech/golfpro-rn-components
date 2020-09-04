@@ -26,5 +26,18 @@ describe('LargeButton', () => {
     expect(mockClickFunction).toHaveBeenCalledTimes(1); 
   });
 
+  it("styles LargeButton correctly", () => {
+    const { getByTestId } = render(
+      <LargeButton text="Clickable" onPress={mockClickFunction} 
+          buttonColor="red" borderColor="red" />
+    );
+  
+    const baseButton = getByTestId("basebutton");
+    expect(baseButton).toHaveStyle({
+      backgroundColor: 'red',
+      borderColor: 'red'
+    });
+  });
+
 });
 
