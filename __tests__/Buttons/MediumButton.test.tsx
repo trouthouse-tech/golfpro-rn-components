@@ -1,33 +1,33 @@
 import React from 'react';
-import { LargeButton } from "../src/Buttons/";
+import { MediumButton } from "../../src/Buttons";
 
 import { render, cleanup, fireEvent } from "@testing-library/react-native";
 import '@testing-library/jest-native/extend-expect';
 import renderer from 'react-test-renderer';
 
-describe('LargeButton', () => {
+describe('MediumButton', () => {
 
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
   test('renders and matches snapshot', () => {
-    const tree = renderer.create(<LargeButton text="Test" onPress={mockClickFunction} />).toJSON();
+    const tree = renderer.create(<MediumButton text="Request Lesson" onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders a clickable LargeButton", () => {
+  it("renders a clickable MediumButton", () => {
     const { getByText } = render(
-      <LargeButton text="Clickable" onPress={mockClickFunction} />
+      <MediumButton text="Request Lesson" onPress={mockClickFunction} />
     );
 
-    const button = getByText("Clickable");
+    const button = getByText("Request Lesson");
     fireEvent.press(button); //press the button
     expect(mockClickFunction).toHaveBeenCalledTimes(1);
   });
 
-  it("styles LargeButton correctly", () => {
+  it("styles MediumButton correctly", () => {
     const { getByTestId } = render(
-      <LargeButton text="Clickable" onPress={mockClickFunction}
+      <MediumButton text="Request Lesson" onPress={mockClickFunction}
         buttonColor="red" borderColor="red" />
     );
 

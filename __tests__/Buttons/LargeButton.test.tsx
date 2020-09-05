@@ -1,22 +1,23 @@
 import React from 'react';
-import { LargeSquareOnPress } from "../src/Buttons";
+import { LargeButton } from "../../src/Buttons";
+
 import { render, cleanup, fireEvent } from "@testing-library/react-native";
 import '@testing-library/jest-native/extend-expect';
 import renderer from 'react-test-renderer';
 
-describe('LargeSquareOnPress', () => {
+describe('LargeButton', () => {
 
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
   test('renders and matches snapshot', () => {
-    const tree = renderer.create(<LargeSquareOnPress text="Test" onPress={mockClickFunction} />).toJSON();
+    const tree = renderer.create(<LargeButton text="Test" onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders a clickable LargeSquareOnPress", () => {
+  it("renders a clickable LargeButton", () => {
     const { getByText } = render(
-      <LargeSquareOnPress text="Clickable" onPress={mockClickFunction} />
+      <LargeButton text="Clickable" onPress={mockClickFunction} />
     );
 
     const button = getByText("Clickable");
@@ -24,11 +25,12 @@ describe('LargeSquareOnPress', () => {
     expect(mockClickFunction).toHaveBeenCalledTimes(1);
   });
 
-  it("styles LargeSquareOnPress correctly", () => {
+  it("styles LargeButton correctly", () => {
     const { getByTestId } = render(
-      <LargeSquareOnPress text="Clickable" onPress={mockClickFunction} borderColor="red" buttonColor="red"
-      />
+      <LargeButton text="Clickable" onPress={mockClickFunction}
+        buttonColor="red" borderColor="red" />
     );
+
     const baseButton = getByTestId("basebutton");
     expect(baseButton).toHaveStyle({
       backgroundColor: 'red',
