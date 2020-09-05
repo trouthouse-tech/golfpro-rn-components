@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StandardTextInput renders and matches snapshot 1`] = `
+<TextInput
+  allowFontScaling={true}
+  autoCapitalize="none"
+  autoFocus={true}
+  editable={true}
+  keyboardType="default"
+  onBlur={[Function]}
+  onChangeText={[Function]}
+  placeholder="Your Name?"
+  placeholderTextColor="rgba(0,0,0,.5)"
+  rejectResponderTermination={true}
+  secureTextEntry={true}
+  style={
+    Object {
+      "borderColor": "gray",
+      "borderRadius": 10,
+      "borderWidth": 1,
+      "color": "black",
+      "fontSize": 18,
+      "height": 40,
+      "marginVertical": 10,
+      "padding": 10,
+      "width": 576.9230769230769,
+    }
+  }
+  underlineColorAndroid="transparent"
+  value="Name"
+/>
+`;
