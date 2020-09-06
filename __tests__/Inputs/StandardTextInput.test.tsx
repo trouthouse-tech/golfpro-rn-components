@@ -27,4 +27,15 @@ describe('StandardTextInput', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    it('calls onChangeText when textChanges', () => {
+
+        const { getByPlaceholderText } = render(
+            <StandardTextInput {...defaultInputProps} />
+        );
+
+        const textInput = getByPlaceholderText("Your Name?");
+        fireEvent.changeText(textInput, 'Name');
+        expect(mockFunction).toHaveBeenCalledWith('Name');
+    });
+
 });
