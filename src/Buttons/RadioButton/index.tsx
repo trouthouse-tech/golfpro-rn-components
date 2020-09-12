@@ -1,14 +1,14 @@
-import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
+import { View, StyleSheet, Text, TouchableHighlight } from 'react-native';
 import React from 'react';
-import {Fonts} from '../../styles/';
+import { Fonts } from '../../styles/';
 
-type Props = {
+type RadioButtonProps = {
   isActive: boolean;
   text: string;
   onPress(): void;
 };
 
-export default function RadioButton({isActive, text, onPress}: Props) {
+export default function RadioButton({ isActive, text, onPress }: RadioButtonProps) {
   return (
     <TouchableHighlight onPress={() => onPress()}>
       <View style={styles.button}>
