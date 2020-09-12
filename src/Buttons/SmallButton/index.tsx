@@ -12,14 +12,17 @@ type SmallButtonProps = {
   additionalStyling?: {};
 }
 
-export default function SmallButton({
-  onPress,
-  text,
-  buttonColor,
-  textColor,
-  borderColor,
-  additionalStyling,
-}: SmallButtonProps) {
+export default function SmallButton(props: SmallButtonProps) {
+
+  const {
+    onPress,
+    text,
+    buttonColor,
+    textColor,
+    borderColor,
+    additionalStyling,
+  } = props;
+
   const child = (
     <Text style={[styles.buttonText, { color: textColor || Colors.main_green }]}>
       {text}
