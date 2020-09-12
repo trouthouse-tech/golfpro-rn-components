@@ -46,7 +46,7 @@ export default function SmallButton(props: SmallButtonProps) {
 const styles = StyleSheet.create({
   small: {
     width: Utils.DEVICE_WIDTH / 3,
-    height: Utils.DEVICE_HEIGHT / 12,
+    height: Utils.DEVICE_HEIGHT / 15,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
