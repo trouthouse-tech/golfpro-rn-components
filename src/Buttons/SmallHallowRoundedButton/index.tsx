@@ -5,9 +5,11 @@ import SmallButton from '../SmallButton';
 type SmallHallowRoundedButtonProps = {
   onPress(): void;
   text: string;
-  additionalStyling: {};
 };
 
 export default function SmallHallowRoundedButton(props: SmallHallowRoundedButtonProps) {
-  return <SmallButton {...props} buttonColor={Colors.white} />;
+  const additionalStyling = {
+    borderRadius: 15,
+  };
+  return <SmallButton {...props} buttonColor={Colors.white} additionalStyling={additionalStyling} />;
 }
