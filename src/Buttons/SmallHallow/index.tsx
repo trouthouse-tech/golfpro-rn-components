@@ -1,13 +1,13 @@
 import React from 'react';
-import {Colors} from '../../styles';
+import { Colors } from '../../styles';
 import SmallButton from '../SmallButton';
 
-type ButtonProps = {
+type SmallHallowButtonProps = {
   onPress(): void;
   text: string;
 };
 
-export default function SmallHallowButton(props: ButtonProps) {
+export default function SmallHallowButton(props: SmallHallowButtonProps) {
   const styles = {
     borderRadius: 10,
   };
