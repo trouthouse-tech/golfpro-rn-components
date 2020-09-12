@@ -1,8 +1,15 @@
 import React from 'react';
 import LargeButton from '../LargeButton';
-import {Colors} from '../../styles';
-import {ButtonProps} from '../';
+import { Colors } from '../../styles';
 
-export default function LargeHallowSquareOnPress(props: ButtonProps) {
+type LargeHallowSquareProps = {
+  onPress(): void;
+  text: string;
+  textColor?: string;
+  borderColor?: string;
+}
+
+
+export default function LargeHallowSquareOnPress(props: LargeHallowSquareProps) {
   return <LargeButton {...props} buttonColor={Colors.white} />;
 }
