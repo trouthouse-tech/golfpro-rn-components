@@ -1,8 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {Fonts, Utils, Colors} from '../../styles/';
+import { StyleSheet, Text } from 'react-native';
+import { Fonts, Utils, Colors } from '../../styles/';
 import BaseButton from '../BaseButton';
-import {ButtonProps} from '../';
+
+type SmallButtonProps = {
+  onPress(): void;
+  text: string;
+  buttonColor?: string;
+  textColor?: string;
+  borderColor?: string;
+  additionalStyling?: {};
+}
 
 export default function SmallButton({
   onPress,
@@ -11,9 +19,9 @@ export default function SmallButton({
   textColor,
   borderColor,
   additionalStyling,
-}: ButtonProps) {
+}: SmallButtonProps) {
   const child = (
-    <Text style={[styles.buttonText, {color: textColor || Colors.main_green}]}>
+    <Text style={[styles.buttonText, { color: textColor || Colors.main_green }]}>
       {text}
     </Text>
   );
