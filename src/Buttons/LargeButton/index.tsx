@@ -2,7 +2,14 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Fonts, Utils, Colors } from '../../styles/';
 import BaseButton from '../BaseButton';
-import { ButtonProps } from '../';
+
+type LargeButtonProps = {
+  onPress(): void;
+  text: string;
+  buttonColor?: string;
+  textColor?: string;
+  borderColor?: string;
+}
 
 export default function LargeButton({
   onPress,
@@ -10,7 +17,7 @@ export default function LargeButton({
   buttonColor,
   textColor,
   borderColor,
-}: ButtonProps) {
+}: LargeButtonProps) {
   const child = (
     <Text style={[styles.buttonText, { color: textColor || Colors.white }]}>
       {text}
