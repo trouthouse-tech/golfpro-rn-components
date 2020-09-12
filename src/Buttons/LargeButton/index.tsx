@@ -11,13 +11,16 @@ type LargeButtonProps = {
   borderColor?: string;
 }
 
-export default function LargeButton({
-  onPress,
-  text,
-  buttonColor,
-  textColor,
-  borderColor,
-}: LargeButtonProps) {
+export default function LargeButton(props: LargeButtonProps) {
+
+  const {
+    onPress,
+    text,
+    buttonColor,
+    textColor,
+    borderColor,
+  } = props;
+
   const child = (
     <Text style={[styles.buttonText, { color: textColor || Colors.white }]}>
       {text}
