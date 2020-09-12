@@ -20,7 +20,7 @@ exports[`SmallHallowButton renders and matches snapshot 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "height": 111.16666666666667,
+          "height": 88.93333333333334,
           "justifyContent": "center",
           "marginTop": 10,
           "width": 250,
