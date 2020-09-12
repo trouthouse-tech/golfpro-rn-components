@@ -11,13 +11,16 @@ type MediumButtonProps = {
   borderColor?: string;
 }
 
-export default function MediumButton({
-  onPress,
-  text,
-  buttonColor,
-  textColor,
-  borderColor,
-}: MediumButtonProps) {
+export default function MediumButton(props: MediumButtonProps) {
+
+  const {
+    onPress,
+    text,
+    buttonColor,
+    textColor,
+    borderColor,
+  } = props;
+
   const child = (
     <Text style={[styles.buttonText, { color: textColor || Colors.white }]}>
       {text}
