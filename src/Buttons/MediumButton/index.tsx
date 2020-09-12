@@ -55,10 +55,4 @@ const styles = StyleSheet.create({
     fontSize: Fonts.normal,
     fontWeight: 'bold',
   },
-
-  button: {
-    width: Utils.DEVICE_WIDTH / 1.2,
-    height: Utils.DEVICE_HEIGHT / 15,
-    borderRadius: 10,
-  },
 });
