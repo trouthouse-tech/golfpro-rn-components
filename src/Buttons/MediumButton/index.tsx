@@ -2,7 +2,14 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { Fonts, Utils, Colors } from '../../styles';
 import BaseButton from '../BaseButton';
-import { ButtonProps } from '../';
+
+type MediumButtonProps = {
+  onPress(): void;
+  text: string;
+  buttonColor?: string;
+  textColor?: string;
+  borderColor?: string;
+}
 
 export default function MediumButton({
   onPress,
@@ -10,7 +17,7 @@ export default function MediumButton({
   buttonColor,
   textColor,
   borderColor,
-}: ButtonProps) {
+}: MediumButtonProps) {
   const child = (
     <Text style={[styles.buttonText, { color: textColor || Colors.white }]}>
       {text}
