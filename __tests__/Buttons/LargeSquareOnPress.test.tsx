@@ -9,7 +9,7 @@ describe('LargeSquareOnPress', () => {
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
-  test('renders and matches snapshot', () => {
+  it('renders and matches snapshot', () => {
     const tree = renderer.create(<LargeSquareOnPress text="Test" onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -26,7 +26,7 @@ describe('LargeSquareOnPress', () => {
 
   it("styles LargeSquareOnPress correctly", () => {
     const { getByTestId } = render(
-      <LargeSquareOnPress text="Clickable" onPress={mockClickFunction} borderColor="red" buttonColor="red"
+      <LargeSquareOnPress text="Clickable" onPress={mockClickFunction} buttonColor="red"
       />
     );
     const baseButton = getByTestId("basebutton");

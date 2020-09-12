@@ -9,7 +9,7 @@ describe('TextButton', () => {
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
-  test('renders and matches snapshot', () => {
+  it('renders and matches snapshot', () => {
     const tree = renderer.create(<TextButton text="Test" buttonStyle={{ padding: 10 }}
       textStyle={{ fontSize: 10 }} onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();

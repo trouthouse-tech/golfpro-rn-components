@@ -10,7 +10,7 @@ describe('LargeButton', () => {
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
-  test('renders and matches snapshot', () => {
+  it('renders and matches snapshot', () => {
     const tree = renderer.create(<LargeButton text="Test" onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

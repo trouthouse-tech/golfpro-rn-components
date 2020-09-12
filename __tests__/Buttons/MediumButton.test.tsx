@@ -10,7 +10,7 @@ describe('MediumButton', () => {
   const mockClickFunction = jest.fn();
 
   afterEach(cleanup);
-  test('renders and matches snapshot', () => {
+  it('renders and matches snapshot', () => {
     const tree = renderer.create(<MediumButton text="Request Lesson" onPress={mockClickFunction} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
