@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {Fonts, Utils, Colors} from '../../styles';
+import { StyleSheet, Text } from 'react-native';
+import { Fonts, Utils, Colors } from '../../styles';
 import BaseButton from '../BaseButton';
-import {ButtonProps} from '../';
+import { ButtonProps } from '../';
 
 export default function MediumButton({
   onPress,
@@ -12,7 +12,7 @@ export default function MediumButton({
   borderColor,
 }: ButtonProps) {
   const child = (
-    <Text style={[styles.buttonText, {color: textColor || Colors.white}]}>
+    <Text style={[styles.buttonText, { color: textColor || Colors.white }]}>
       {text}
     </Text>
   );
@@ -25,14 +25,14 @@ export default function MediumButton({
   return (
     <BaseButton
       onPress={() => onPress()}
-      buttonStyle={[styles.mediumSquare, customStyles]}
+      buttonStyle={[styles.mediumButton, customStyles]}
       child={child}
     />
   );
 }
 
 const styles = StyleSheet.create({
-  mediumSquare: {
+  mediumButton: {
     width: Utils.DEVICE_WIDTH / 1.7,
     height: Utils.DEVICE_HEIGHT / 12,
     borderRadius: 5,
