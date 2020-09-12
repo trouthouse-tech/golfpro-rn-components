@@ -5,8 +5,6 @@ import TextButton from './TextButton';
 import SmallHallowButton from './SmallHallow';
 import MediumButton from './MediumButton';
 
-import {ButtonProps} from './Types/';
-
 export {
   LargeHallowSquareOnPress,
   LargeButton,
@@ -15,5 +13,3 @@ export {
   SmallHallowButton,
   MediumButton,
 };
-
-export type {ButtonProps};
