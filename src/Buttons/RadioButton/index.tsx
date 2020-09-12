@@ -8,7 +8,8 @@ type RadioButtonProps = {
   onPress(): void;
 };
 
-export default function RadioButton({ isActive, text, onPress }: RadioButtonProps) {
+export default function RadioButton(props: RadioButtonProps) {
+  const { isActive, text, onPress } = props;
   return (
     <TouchableHighlight onPress={() => onPress()}>
       <View style={styles.button}>
