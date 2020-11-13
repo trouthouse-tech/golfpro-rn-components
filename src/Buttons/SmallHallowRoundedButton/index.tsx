@@ -5,6 +5,7 @@ import SmallButton from '../SmallButton';
 type SmallHallowRoundedButtonProps = {
   onPress(): void;
   text: string;
+  disabled?: boolean;
 };
 
 export default function SmallHallowRoundedButton(props: SmallHallowRoundedButtonProps) {

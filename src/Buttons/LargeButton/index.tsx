@@ -9,6 +9,8 @@ type LargeButtonProps = {
   buttonColor?: string;
   textColor?: string;
   borderColor?: string;
+  underlayColor?: string;
+  disabled?: boolean;
 }
 
 export default function LargeButton(props: LargeButtonProps) {
@@ -19,6 +21,8 @@ export default function LargeButton(props: LargeButtonProps) {
     buttonColor,
     textColor,
     borderColor,
+    underlayColor,
+    disabled,
   } = props;
 
   const child = (
@@ -38,6 +42,8 @@ export default function LargeButton(props: LargeButtonProps) {
       onPress={() => onPress()}
       buttonStyle={[styles.largeButton, customStyles]}
       child={child}
+      underlayColor={underlayColor || buttonColor || Colors.main_green}
+      disabled={disabled}
     />
   );
 }

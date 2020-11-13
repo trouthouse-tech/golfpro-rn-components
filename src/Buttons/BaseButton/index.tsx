@@ -5,15 +5,20 @@ type BaseButtonProps = {
   onPress(): void;
   buttonStyle: {};
   child: React.ReactNode;
+  underlayColor: string;
+  disabled?: boolean;
 }
 
 export default function BaseButton(props: BaseButtonProps) {
-  const { onPress, buttonStyle, child } = props;
+  const { onPress, buttonStyle, child, underlayColor, disabled = false } = props;
   return (
     <TouchableHighlight
       style={[styles.button, buttonStyle]}
       onPress={() => onPress()}
-      testID="basebutton">
+      testID="basebutton"
+      activeOpacity={0}
+      underlayColor={underlayColor}
+      disabled={disabled}>
       {child}
     </TouchableHighlight>
   );

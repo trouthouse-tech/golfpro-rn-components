@@ -10,6 +10,8 @@ type SmallButtonProps = {
   textColor?: string;
   borderColor?: string;
   additionalStyling?: {};
+  underlayColor?: string;
+  disabled?: boolean;
 }
 
 export default function SmallButton(props: SmallButtonProps) {
@@ -21,6 +23,8 @@ export default function SmallButton(props: SmallButtonProps) {
     textColor,
     borderColor,
     additionalStyling,
+    underlayColor,
+    disabled,
   } = props;
 
   const child = (
@@ -39,6 +43,8 @@ export default function SmallButton(props: SmallButtonProps) {
       onPress={() => onPress()}
       buttonStyle={[styles.small, customStyles, additionalStyling]}
       child={child}
+      underlayColor={underlayColor || buttonColor || Colors.main_green}
+      disabled={disabled}
     />
   );
 }

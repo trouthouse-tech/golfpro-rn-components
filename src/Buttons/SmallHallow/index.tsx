@@ -5,6 +5,7 @@ import SmallButton from '../SmallButton';
 type SmallHallowButtonProps = {
   onPress(): void;
   text: string;
+  disabled?: boolean;
 };
 
 export default function SmallHallowButton(props: SmallHallowButtonProps) {

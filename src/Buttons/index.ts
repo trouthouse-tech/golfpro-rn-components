@@ -5,13 +5,15 @@ import TextButton from './TextButton';
 import SmallHallowButton from './SmallHallow';
 import SmallHallowRoundedButton from './SmallHallowRoundedButton';
 import MediumButton from './MediumButton';
+import SmallButton from './SmallButton';
 
 export {
   LargeHallowSquareOnPress,
   LargeButton,
   LargeSquareOnPress,
   TextButton,
+  SmallButton,
   SmallHallowButton,
-  MediumButton,
   SmallHallowRoundedButton,
+  MediumButton,
 };

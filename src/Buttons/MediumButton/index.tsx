@@ -9,16 +9,19 @@ type MediumButtonProps = {
   buttonColor?: string;
   textColor?: string;
   borderColor?: string;
+  underlayColor?: string;
+  disabled?: boolean;
 }
 
 export default function MediumButton(props: MediumButtonProps) {
-
   const {
     onPress,
     text,
     buttonColor,
     textColor,
     borderColor,
+    underlayColor,
+    disabled,
   } = props;
 
   const child = (
@@ -37,6 +40,8 @@ export default function MediumButton(props: MediumButtonProps) {
       onPress={() => onPress()}
       buttonStyle={[styles.mediumButton, customStyles]}
       child={child}
+      underlayColor={underlayColor || buttonColor || Colors.main_green}
+      disabled={disabled}
     />
   );
 }

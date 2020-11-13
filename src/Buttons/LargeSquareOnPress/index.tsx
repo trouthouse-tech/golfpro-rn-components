@@ -6,6 +6,7 @@ type LargeSquareProps = {
   text: string;
   buttonColor?: string;
   textColor?: string;
+  disabled?: boolean;
 }
 
 export default function LargeSquareOnPress(props: LargeSquareProps) {

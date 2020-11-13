@@ -7,6 +7,7 @@ type LargeHallowSquareProps = {
   text: string;
   textColor?: string;
   borderColor?: string;
+  disabled?: boolean;
 }
 
 
