@@ -9,4 +9,5 @@ export type InputProps = {
   onBlur?(): void;
   keyboardType?: KeyboardType;
   editable?: boolean;
+  blurOnSubmit?: boolean;
 };

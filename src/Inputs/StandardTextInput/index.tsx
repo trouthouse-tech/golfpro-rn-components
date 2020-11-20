@@ -14,6 +14,7 @@ export function StandardTextInput(props: InputProps) {
         onBlur,
         keyboardType,
         editable,
+        blurOnSubmit = false,
     } = props;
 
     return (
@@ -29,6 +30,7 @@ export function StandardTextInput(props: InputProps) {
             onBlur={() => !onBlur || onBlur()}
             keyboardType={keyboardType || 'default'}
             editable={editable || true}
+            blurOnSubmit={blurOnSubmit}
         />
     );
 }

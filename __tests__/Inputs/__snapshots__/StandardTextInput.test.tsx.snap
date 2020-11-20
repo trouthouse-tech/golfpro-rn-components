@@ -5,6 +5,7 @@ exports[`StandardTextInput renders and matches snapshot 1`] = `
   allowFontScaling={true}
   autoCapitalize="none"
   autoFocus={true}
+  blurOnSubmit={false}
   editable={true}
   keyboardType="default"
   onBlur={[Function]}
